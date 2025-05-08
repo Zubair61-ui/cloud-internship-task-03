@@ -1,0 +1,15 @@
+A secure, organized solution to store and share intern documents using AWS S3 and pre‑signed URLs.
+
+Project Overview
+
+This repository demonstrates how to:
+
+Set up an AWS account
+
+Create an S3 bucket
+
+Organize storage with logical folders (prefixes)
+
+Upload files with correct metadata
+
+Configure and generate pre‑signed URLs for secure file access
