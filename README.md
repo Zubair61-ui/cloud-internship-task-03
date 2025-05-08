@@ -71,6 +71,7 @@ These prefixes help group documents by type without true directories.
 In the AWS CLI, upload files in binary mode:
 
  ***CLI:***
+ 
 Upload first pdf.
 
 `aws s3 cp jhon-doe-joining-letter.pdf s3://intern-file-storage/joining-letters/ --content-type application/pdf`
