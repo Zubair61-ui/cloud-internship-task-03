@@ -1,34 +1,32 @@
-#Cloud-Based File Storage System
+# Cloud-Based File Storage System
 
 A secure, organized solution to store and share intern documents using AWS S3 and pre‑signed URLs.
 
-Project Overview
+## Project Overview
 
 This repository demonstrates how to:
 
-Set up an AWS account
+### Set up an AWS account
 
-Create an S3 bucket
+### Create an S3 bucket
 
-Organize storage with logical folders (prefixes)
+### Organize storage with logical folders (prefixes)
 
-Upload files with correct metadata
+### Upload files with correct metadata
 
-Configure and generate pre‑signed URLs for secure file access
+### Configure and generate pre‑signed URLs for secure file access
 
 These steps lay the foundation for a production‑ready file storage backend for internee.pk.
 
-Prerequisites
+## Prerequisites
 
-AWS Account – Active AWS account with IAM user credentials.
+### AWS Account – Active AWS account with IAM user credentials.
 
-AWS CLI or SDK – AWS CLI installed or AWS SDK (e.g., Boto3 for Python).
+### Permissions – IAM user with permissions to create buckets, upload objects, and generate pre‑signed URLs.
 
-Permissions – IAM user with permissions to create buckets, upload objects, and generate pre‑signed URLs.
+## Step-by-Step Guide
 
-Step-by-Step Guide
-
-1. Set Up an AWS Account
+### 1. Set Up an AWS Account
 
 Navigate to AWS and sign up or log in.
 
@@ -38,7 +36,7 @@ Generate and securely store Access Key ID and Secret Access Key.
 
 
 
-2. Create an S3 Bucket
+### 2. Create an S3 Bucket
 
 Open the AWS Management Console and go to S3.
 
@@ -51,7 +49,7 @@ Select your AWS Region.
 Leave public access blocked (for security).
 
 Enable Versioning if you want object history and rollback.
-
+[Create Bucket](https://example.com)
 
 
 3. Create Folders (Prefixes)
