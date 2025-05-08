@@ -83,9 +83,13 @@ Confirm the files appear under the correct prefixes.
 ### 5. Configure Bucket Permissions for Signed URLs
 
 Ensure public access remains blocked at the bucket level.
-[Signed_url for pdf1](signed_url1.png)
-[Signed_url for pdf2](signed_url2.png)
-[Signed_url for pdf3](signed_url3.png)
+
+[Signed_url for pdf1](signed_url1.png). 
+
+[Signed_url for pdf2](signed_url2.png).
+
+[Signed_url for pdf3](signed_url3.png).  
+
 Users can only access S3 object for 12 hours through pre-signed_urls.
 Share the URL with users; it expires automatically after the specified duration.
 
