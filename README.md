@@ -49,10 +49,10 @@ Select your AWS Region.
 Leave public access blocked (for security).
 
 Enable Versioning if you want object history and rollback.
-[Create Bucket](https://example.com)
+[Create Bucket](create_bucket.png)
 
 
-3. Create Folders (Prefixes)
+### 3. Create Folders (Prefixes)
 
 Inside your bucket, click Create folder three times:
 
@@ -63,50 +63,35 @@ certificates/
 reports/
 
 These prefixes help group documents by type without true directories.
+[Created Folders](interns_folders.png)
 
 
+### 4. Upload Files
 
-4. Upload Files
+In the AWS CLI, upload files in binary mode:
 
-In the console or via SDK/CLI, upload files in binary mode:
+ ***CLI:***
 
-Example CLI:
-
-aws s3 cp resume.pdf s3://intern-file-storage/joining-letters/ --content-type application/pdf
-
-Example Python (Boto3):
-
-with open('doc.pdf', 'rb') as f:
-    s3.upload_fileobj(f, 'intern-file-storage', 'reports/doc.pdf', ExtraArgs={'ContentType': 'application/pdf'})
+aws s3 cp jhon-doe-joining-letter.pdf s3://intern-file-storage/joining-letters/ --content-type application/pdf
+aws s3 cp jhon-doe-certificate.pdf s3://intern-file-storage/certificates/ --content-type application/pdf
+aws s3 cp jhon-doe-joining-report.pdf s3://intern-file-storage/reports/ --content-type application/pdf
 
 Confirm the files appear under the correct prefixes.
 
 
 
-5. Configure Bucket Permissions for Signed URLs
+### 5. Configure Bucket Permissions for Signed URLs
 
 Ensure public access remains blocked at the bucket level.
-
-Use your SDK to generate pre‑signed URLs that grant time‑limited access:
-
-url = s3.generate_presigned_url(
-    'get_object',
-    Params={'Bucket': 'intern-file-storage', 'Key': 'reports/doc.pdf'},
-    ExpiresIn=3600
-)
-
+[Signed_url for pdf1](signed_url1.png)
+[Signed_url for pdf2](signed_url2.png)
+[Signed_url for pdf3](signed_url3.png)
+Users can only access S3 object for 12 hours through pre-signed_urls.
 Share the URL with users; it expires automatically after the specified duration.
 
 
+### Final Output
+[Access pdf through signed_url](access_url1.png)
 
-Next Steps (Optional)
-
-Implement a CLI or web interface to automate uploads and URL generation.
-
-Enforce least‑privilege IAM policies.
-
-Enable default encryption and logging for compliance.
-
-Set up CORS, lifecycle rules, and Object Lock as needed.
 
 © 2025 Internee.pk Intern Project
